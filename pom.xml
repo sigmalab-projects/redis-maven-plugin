@@ -317,9 +317,17 @@
         <connection>scm:git:https://github.com/sigmalab-projects/redis-maven-plugin.git</connection>
         <developerConnection>scm:git:https://github.com/sigmalab-projects/redis-maven-plugin.git</developerConnection>
     </scm>
-    
+
     <issueManagement>
         <system>GitHub Issue Tracking</system>
         <url>https://github.com/sigmalab-projects/redis-maven-plugin/issues</url>
     </issueManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-one-releases-redis-maven-plugin</id>
+            <name>one-releases-redis-maven-plugin</name>
+            <url>https://api.bintray.com/maven/one/releases/redis-maven-plugin</url>
+        </repository>
+    </distributionManagement>
 </project>
