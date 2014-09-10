@@ -7,7 +7,7 @@
     </parent>
     <groupId>de.sigmalab.maven.plugins</groupId>
     <artifactId>redis-maven-plugin</artifactId>
-    <version>0.9.0</version>
+    <version>0.9.1-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
     <description>Redis-Maven-Plugin</description>
     <url>https://github.com/sigmalab-projects/redis-maven-plugin</url>
