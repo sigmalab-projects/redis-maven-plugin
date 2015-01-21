@@ -13,7 +13,6 @@
         <maven.plugin.annotation.version>3.2</maven.plugin.annotation.version>
     </properties>
 
-
     <profiles>
         <profile>
             <id>integration</id>
