@@ -12,10 +12,10 @@ import redis.embedded.RedisServer;
 /**
  * Stops the Redis-Server when found in plugin-context.
  *
- * @author  jbellmann
+ * @author jbellmann
  */
-@Mojo(name = "shutdown", defaultPhase = LifecyclePhase.NONE)
-public class ShutdownRedisMojo extends AbstractMojo {
+@Mojo(name = "stop", defaultPhase = LifecyclePhase.POST_INTEGRATION_TEST)
+public class StopRedisMojo extends AbstractMojo {
 
     @Parameter(property = "redis.server.skip", defaultValue = "false")
     public boolean skip;
@@ -27,15 +27,11 @@ public class ShutdownRedisMojo extends AbstractMojo {
             return;
         }
 
-        RedisServer redisServer = (RedisServer) getPluginContext().get(RunRedisMojo.REDIS_SERVER_INSTANCE);
+        RedisServer redisServer = (RedisServer) getPluginContext().get(StartRedisMojo.REDIS_SERVER_INSTANCE);
         if (redisServer != null) {
-            try {
-                getLog().info("Shutting down Redis server ...");
-                redisServer.stop();
-                getLog().info("Redis server stopped.");
-            } catch (InterruptedException e) {
-                getLog().error(e);
-            }
+            getLog().info("Shutting down Redis server ...");
+            redisServer.stop();
+            getLog().info("Redis server stopped.");
         }
     }
 }
