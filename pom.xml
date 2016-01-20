@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.sigmalab.maven.plugins</groupId>
     <artifactId>redis-maven-plugin</artifactId>
-    <version>0.9.2-SNAPSHOT</version>
+    <version>0.9.3</version>
     <packaging>maven-plugin</packaging>
     <description>Redis-Maven-Plugin</description>
     <url>https://github.com/sigmalab-projects/redis-maven-plugin</url>
@@ -332,11 +331,11 @@
         <url>https://github.com/sigmalab-projects/redis-maven-plugin/issues</url>
     </issueManagement>
 
-    <distributionManagement>
-        <repository>
-            <id>bintray-sigmalab-maven-releases-redis-maven-plugin</id>
-            <name>sigmalab-maven-releases-redis-maven-plugin</name>
-            <url>https://api.bintray.com/maven/sigmalab/maven-releases/redis-maven-plugin</url>
-        </repository>
-    </distributionManagement>
+	<distributionManagement>
+	    <repository>
+	        <id>bintray-sigmalab-maven-releases</id>
+	        <name>sigmalab-maven-releases</name>
+	        <url>https://api.bintray.com/maven/sigmalab/maven-releases/redis-maven-plugin/;publish=1</url>
+	    </repository>
+	</distributionManagement>
 </project>
