@@ -28,4 +28,9 @@ public class Master {
         this.port = port;
     }
 
+    @Override
+    public String toString() {
+        return "Master[hostname=" + host + ",port=" + port + "]";
+    }
+
 }

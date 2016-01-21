@@ -45,11 +45,13 @@ public class StartRedisMojo extends AbstractMojo {
             RedisServerBuilder redisServerBuilder = RedisServer.builder();
             redisServerBuilder = redisServerBuilder.port(port);
             if (master != null) {
+
+                getLog().info("This instance is slave-of : " + master.toString());
                 redisServerBuilder = redisServerBuilder.slaveOf(master.getHost(), master.getPort());
             }
             if (config != null) {
-
-                redisServerBuilder = redisServerBuilder.configFile("/path/to/your/redis.conf");
+                getLog().info("Use config-file : " + config.getAbsolutePath());
+                redisServerBuilder = redisServerBuilder.configFile(config.getAbsolutePath());
             }
             RedisServer redisServer = redisServerBuilder.build();
 
